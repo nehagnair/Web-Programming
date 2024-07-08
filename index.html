@@ -5,7 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Reservation System</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #hotel-details, #room-images, #room-details {
+            padding: 20px;
+            border: 1px solid #ddd;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        #room-images .room-image {
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -19,9 +37,9 @@
             <!-- Room Images Section -->
             <div class="col-md-4" id="room-images">
                 <h2>Our Rooms</h2>
-                <img src="room1.jpg" alt="Room 1" class="img-fluid room-image" onclick="showRoomDetails('room1')">
-                <img src="room2.jpg" alt="Room 2" class="img-fluid room-image" onclick="showRoomDetails('room2')">
-                <img src="room3.jpg" alt="Room 3" class="img-fluid room-image" onclick="showRoomDetails('room3')">
+                <img src="images/room1.jpg" alt="Room 1" class="img-fluid room-image" onclick="showRoomDetails('room1')">
+                <img src="images/room2.jpg" alt="Room 2" class="img-fluid room-image" onclick="showRoomDetails('room2')">
+                <img src="images/room3.jpg" alt="Room 3" class="img-fluid room-image" onclick="showRoomDetails('room3')">
             </div>
 
             <!-- Room Details Section -->
