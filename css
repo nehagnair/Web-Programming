@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#hotel-details, #room-images, #room-details {
+    padding: 20px;
+    border: 1px solid #ddd;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#room-images .room-image {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
