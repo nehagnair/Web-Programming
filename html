@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation System</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Hotel Details Section -->
+            <div class="col-md-4" id="hotel-details">
+                <h2>About Our Hotel</h2>
+                <p>Welcome to our luxurious hotel. We offer the best services to make your stay comfortable and memorable.</p>
+            </div>
+
+            <!-- Room Images Section -->
+            <div class="col-md-4" id="room-images">
+                <h2>Our Rooms</h2>
+                <img src="room1.jpg" alt="Room 1" class="img-fluid room-image" onclick="showRoomDetails('room1')">
+                <img src="room2.jpg" alt="Room 2" class="img-fluid room-image" onclick="showRoomDetails('room2')">
+                <img src="room3.jpg" alt="Room 3" class="img-fluid room-image" onclick="showRoomDetails('room3')">
+            </div>
+
+            <!-- Room Details Section -->
+            <div class="col-md-4" id="room-details">
+                <h2>Room Details</h2>
+                <ol id="details-list">
+                    <!-- Room details will be displayed here -->
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showRoomDetails(room) {
+            const detailsList = document.getElementById('details-list');
+            detailsList.innerHTML = '';
+
+            let details = [];
+            if (room === 'room1') {
+                details = ['King-size bed', 'Ocean view', 'Free Wi-Fi', 'Breakfast included'];
+            } else if (room === 'room2') {
+                details = ['Queen-size bed', 'City view', 'Free Wi-Fi', 'Breakfast included'];
+            } else if (room === 'room3') {
+                details = ['Twin beds', 'Garden view', 'Free Wi-Fi', 'Breakfast included'];
+            }
+
+            details.forEach(detail => {
+                const li = document.createElement('li');
+                li.textContent = detail;
+                detailsList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
